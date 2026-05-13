@@ -82,7 +82,6 @@ nav {
   border: 1px solid #181818;
 }
 
-/* ================= MENU OVERLAY ================= */
 
 .menu-overlay {
   position: fixed;
@@ -94,7 +93,6 @@ nav {
   z-index: 999;
 }
 
-/* ORIGINAL STYLE RESTORED */
 .rectangle {
   width: 1860px;
   height: 929px;
