@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import HamburgerComponent from "./Hamburger";
 import Menu from "./Menu";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,11 +24,11 @@ const Navbar = () => {
             </div>
 
             <div className="nav-links">
-              <a href="/menu">menu</a>
-              <a href="/about">about</a>
-              <a href="/reservation" id="book">
-                Book a Table
-              </a>
+              <NavLink to="/menu">Menu</NavLink>
+              <NavLink to="/about">About</NavLink>
+              <NavLink to="/reservation" id="book">
+                Book a table
+              </NavLink>
             </div>
           </>
         )}
