@@ -33,9 +33,13 @@ nav {
   backdrop-filter: blur(6px);
 }
 
-.front-page nav {
+.layout {
+  position: relative;
+}
+
+.layout nav {
   position: absolute;
- top: 50px;
+  top: 50px;
   left: 50px;
   margin: 0;
   z-index: 1001;
@@ -156,7 +160,6 @@ nav {
   display: block;
 }
 
-
 .hero-text {
   position: absolute;
   bottom: 20px;
@@ -212,3 +215,4 @@ nav {
   font-size: 1.2rem;
   font-weight: bold;
 }
+/* MENU */

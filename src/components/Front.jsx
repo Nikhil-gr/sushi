@@ -1,5 +1,4 @@
 import { useGSAP } from "@gsap/react";
-import Navbar from "./Navbar";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 
@@ -22,7 +21,6 @@ const Front = () => {
     <div className="front-grid">
       <div className="left">
         <div className="front-page">
-          <Navbar />
           <video
             src="/video/sush.mp4"
             autoPlay
