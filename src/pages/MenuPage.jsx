@@ -1,4 +1,22 @@
+import gsap from "gsap";
+import allCards from "../../constants/allcards";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { useRef } from "react";
+
+
+gsap.registerPlugin(ScrollToPlugin);
 const MenuPage = () => {
+  const categories = ["Maki", "Uramaki", "Special Rolls"];
+  const rightMenuRef = useRef(null);
+
+  const handleScroll = (e, targetId) => {
+    e.preventDefault();
+    gsap.to(rightMenuRef.current, {
+      duration: 1,
+      scrollTo: { y: targetId, offsetY: 50 },
+      ease: "power2.inOut",
+    });
+  };
   return (
     <div className="container">
       <div className="left-menu">
@@ -10,36 +28,46 @@ const MenuPage = () => {
         </div>
       </div>
 
-      <div className="right-menu">
+      <div className="right-menu" ref={rightMenuRef}>
         <div className="buttons">
-          <a href="#maki" id="maki">
+          <a href="#maki" onClick={(e) => handleScroll(e, "#maki")}>
             Maki
           </a>
-          <a href="#uramaki" id="uramaki">
+          <a href="#uramaki" onClick={(e) => handleScroll(e, "#uramaki")}>
             Uramaki
           </a>
-          <a href="#specialrolls" id="specialrolls">
+          <a
+            href="#special-rolls"
+            onClick={(e) => handleScroll(e, "#special-rolls")}
+          >
             Special Rolls
           </a>
         </div>
 
-        <div className="menu-containers">
-          <h1>Maki</h1>
+        {categories.map((category, index) => (
+          <div
+            className="menu-containers"
+            key={index}
+            id={category.toLowerCase().replace(/\s+/g, "-")}
+          >
+            <h1>{category}</h1>
 
-          <div className="content">
-            <img src="/images/maki.png" alt="maki" />
-            <div className="content-desc">
-              <h2>SPICY TUNA MAKI</h2>
-              <p>
-                tantalizing blend of spicy tuna, cucumber, and avocado,
-                harmoniously rolled in nori and seasoned rice.
-              </p>
-            </div>
-            <p className="price">$5</p>
+            {allCards
+              .filter((item) => item.title === category)
+              .map((item, i) => (
+                <div className="content" key={i}>
+                  <img src={item.imageUrl} alt={item.name} />
+
+                  <div className="content-desc">
+                    <h2>{item.name}</h2>
+                    <p>{item.description}</p>
+                  </div>
+
+                  <p className="price">{item.price}</p>
+                </div>
+              ))}
           </div>
-
-          
-        </div>
+        ))}
       </div>
     </div>
   );
