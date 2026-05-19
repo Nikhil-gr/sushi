@@ -2,14 +2,17 @@ const navLinks = [
   {
     id: "menu",
     title: "Menu",
+    path: "/Menu",
   },
   {
     id: "reservation",
     title: "Reservation",
+    path: "/reservation",
   },
   {
     id: "about",
     title: "About",
+    path: "/about",
   },
   {
     id: "contact",

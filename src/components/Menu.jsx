@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { navLinks } from "../../constants";
 
 const Menu = ({ setIsOpen }) => {
@@ -7,9 +8,9 @@ const Menu = ({ setIsOpen }) => {
         <ul>
           {navLinks.map((link) => (
             <li key={link.id}>
-              <a href={`#${link.id}`} onClick={() => setIsOpen(false)}>
+              <NavLink to={link.path} onClick={() => setIsOpen(false)}>
                 {link.title}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>
