@@ -2,6 +2,8 @@ import gsap from "gsap";
 import allCards from "../../constants/allcards";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/all";
 
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -17,6 +19,23 @@ const MenuPage = () => {
       ease: "power2.inOut",
     });
   };
+
+    useGSAP(() => {
+      const heroSplit = new SplitText(".title", {
+        type: "chars, words",
+      });
+
+      gsap.from(heroSplit.chars, {
+        filter: "blur(10px)",
+        opacity: 0,
+        y: 100,
+        ease: "back",
+        duration: 1,
+        stagger: 0.05,
+      });
+    }, []);
+
+
   return (
     <div className="container">
       <div className="left-menu">

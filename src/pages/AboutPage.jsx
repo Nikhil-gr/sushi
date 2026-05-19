@@ -1,6 +1,23 @@
+import { useGSAP } from "@gsap/react";
 import { ratings } from "../../constants";
+import { SplitText } from "gsap/all";
+import gsap from "gsap";
 
 const AboutPage = () => {
+      useGSAP(() => {
+        const heroSplit = new SplitText(".title", {
+          type: "chars, words",
+        });
+
+        gsap.from(heroSplit.chars, {
+          filter: "blur(10px)",
+          opacity: 0,
+          y: 100,
+          ease: "back",
+          duration: 1,
+          stagger: 0.05,
+        });
+      }, []);
   return (
     <div className="container-about">
       <div className="left-about">
@@ -8,7 +25,7 @@ const AboutPage = () => {
           <img src="/images/about.png" alt="about-cover" />
         </div>
         <div className="about-text">
-          <h1 className="title">Menu</h1>
+          <h1 className="title">About</h1>
         </div>
       </div>
 
