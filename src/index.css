@@ -222,7 +222,7 @@ nav {
   grid-template-columns: 1fr 1fr;
   height: 100vh;
   padding: 24px;
-  gap: 24px;
+  gap: 16px;
   overflow: hidden;
 }
 
@@ -353,4 +353,141 @@ nav {
 .price {
   font-size: 28px;
   color: #f5e6c8;
+}
+
+/* ABOUT */
+.container-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  gap: 16px;
+  overflow: hidden;
+  padding: 24px;
+}
+.left-about {
+  position: sticky;
+  top: 24px;
+  height: calc(100vh - 48px);
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.about-cover {
+  width: 100%;
+  height: 100%;
+}
+
+.about-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.about-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: #f5e6c8;
+}
+
+.about-text h1 {
+  font-size: 7rem;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.right-about {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
+}
+.container-1 {
+  display: flex;
+  gap: 16px;
+}
+.container-1 img {
+  border-radius: 16px;
+  width: 100%;
+}
+
+.about-description {
+  display: flex;
+  border: 1px solid rgba(239, 231, 210, 0.15);
+  border-radius: 16px;
+  flex-direction: column;
+  padding: 48px;
+  justify-content: space-between;
+}
+
+.about-description h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  max-width: 20pc;
+  overflow-wrap: break-word;
+}
+
+.about-description p {
+  font-size: 1rem;
+}
+
+.container-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ratings {
+  border: 1px solid rgba(239, 231, 210, 0.15);
+  border-radius: 16px;
+  text-align: center;
+  padding: 32px;
+}
+
+.rating-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ratings h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.ratings p {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #f5f2ea;
+  letter-spacing: 1px;
+}
+
+.container-3 {
+  display: flex;
+  gap: 16px;
+}
+
+.container-3 img {
+  border-radius: 16px;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 48px;
+  justify-content: space-between;
+  border: 1px solid rgba(239, 231, 210, 0.15);
+  border-radius: 16px;
+}
+
+.story h1 {
+  text-transform: uppercase;
+}
+
+.story p {
+  text-align: justify;
+  line-height: 1.4;
 }

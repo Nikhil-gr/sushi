@@ -60,4 +60,24 @@ const contactImages = [
   },
 ];
 
-export { navLinks, aboutImages, frontImages, contactImages };
+const ratings = [
+  {
+    id: 1,
+    rating: "/images/Grid.png",
+    title: "Trip Advisor",
+    tag: "Best sushi",
+  },
+  {
+    id: 2,
+    rating: "/images/Grid.png",
+    title: "Michelin Guide",
+    tag: "quality food",
+  },
+  {
+    id: 3,
+    rating: "/images/Grid.png",
+    title: "Star Dining",
+    tag: "cool vibe",
+  },
+];
+export { navLinks, aboutImages, frontImages, contactImages, ratings };
