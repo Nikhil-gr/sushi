@@ -17,8 +17,8 @@ const navLinks = [
   {
     id: "contact",
     title: "Contact",
+    path: "/contact",
   },
-
 ];
 
 const frontImages = [
@@ -80,4 +80,42 @@ const ratings = [
     tag: "cool vibe",
   },
 ];
-export { navLinks, aboutImages, frontImages, contactImages, ratings };
+
+const openingHours = [
+  {
+    day: "Monday",
+    open: "9:00 AM",
+    close: "10:00 PM",
+  },
+  {
+    day: "Tuesday",
+    open: "9:00 AM",
+    close: "10:00 PM",
+  },
+  {
+    day: "Wednesday",
+    open: "9:00 AM",
+    close: "10:00 PM",
+  },
+  {
+    day: "Thursday",
+    open: "9:00 AM",
+    close: "10:00 PM",
+  },
+  {
+    day: "Friday",
+    open: "9:00 AM",
+    close: "11:00 PM",
+  },
+  {
+    day: "Saturday",
+    open: "10:00 AM",
+    close: "11:00 PM",
+  },
+  {
+    day: "Sunday",
+    open: "Closed",
+    close: "",
+  },
+];
+export { navLinks, aboutImages, frontImages, contactImages, ratings, openingHours };
