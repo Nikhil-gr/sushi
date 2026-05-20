@@ -1,15 +1,15 @@
-import Front from "./components/Front";
 import MenuPage from "./pages/MenuPage";
 import Layout from "./components/Layout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import ReservationPage from "./pages/ReservationPage";
+import FrontPage from "./pages/FrontPage";
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Front />} />
+          <Route path="/" element={<FrontPage />} />
           <Route path="/menu" element={<MenuPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/reservation" element={<ReservationPage />} />

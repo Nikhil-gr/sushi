@@ -1,8 +1,9 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
+import { Link } from "react-router-dom";
 
-const Front = () => {
+const FrontPage = () => {
   useGSAP(() => {
     const heroSplit = new SplitText(".title", {
       type: "chars, words",
@@ -41,19 +42,25 @@ const Front = () => {
 
       <div className="right">
         <div className="right-card">
-          <img src="/images/front1.png" alt="menu" />
+          <Link to={"/menu"}>
+            <img src="/images/front1.png" alt="menu" />
+          </Link>
           <div className="card-label">
             Menu <span>→</span>
           </div>
         </div>
         <div className="right-card">
-          <img src="/images/front2.png" alt="reservation" />
+          <Link to={"/reservation"}>
+            <img src="/images/front2.png" alt="reservation" />
+          </Link>
           <div className="card-label">
             Reservation <span>→</span>
           </div>
         </div>
         <div className="right-card">
-          <img src="/images/front3.png" alt="our restaurant" />
+          <Link to={"/about"}>
+            <img src="/images/front3.png" alt="our restaurant" />
+          </Link>
           <div className="card-label">
             Our Restaurant <span>→</span>
           </div>
@@ -63,4 +70,4 @@ const Front = () => {
   );
 };
 
-export default Front;
+export default FrontPage;

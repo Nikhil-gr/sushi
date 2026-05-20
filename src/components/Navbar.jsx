@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import HamburgerComponent from "./Hamburger";
 import Menu from "./Menu";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,7 @@ const Navbar = () => {
         {!isOpen && (
           <>
             <div id="logo">
-              <a href="/">Qitchen</a>
+              <Link to={"/"}>Qitchen</Link>
             </div>
 
             <div className="nav-links">
