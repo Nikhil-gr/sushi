@@ -42,7 +42,7 @@ const MenuPage = () => {
       <div className="left-menu">
         <div className="menu-cover">
           <LazyLoadImage
-            src="/images/front4.png"
+            src="/images/front4.webp"
             alt="menu-cover"
             effect="blur"
             loading="lazy"

@@ -30,7 +30,7 @@ const FrontPage = () => {
             loop
             playsInline
             preload="metadata"
-            poster="/images/front4.png"
+            poster="/images/front4.webp"
           />{" "}
         </div>
         <div className="hero-text">
@@ -46,7 +46,7 @@ const FrontPage = () => {
         <div className="right-card">
           <Link to={"/menu"}>
             <LazyLoadImage
-              src="/images/front1.png"
+              src="/images/front1.webp"
               alt="menu"
               effect="blur"
               loading="lazy"
@@ -60,7 +60,7 @@ const FrontPage = () => {
         <div className="right-card">
           <Link to={"/reservation"}>
             <LazyLoadImage
-              src="/images/front2.png"
+              src="/images/front2.webp"
               alt="reservation"
               effect="blur"
               loading="lazy"
@@ -74,7 +74,7 @@ const FrontPage = () => {
         <div className="right-card">
           <Link to={"/about"}>
             <LazyLoadImage
-              src="/images/front3.png"
+              src="/images/front3.webp"
               alt="our restaurant"
               effect="blur"
               loading="lazy"
