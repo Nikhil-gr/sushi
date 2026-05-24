@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import { ratings } from "../../constants";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const AboutPage = () => {
   useGSAP(() => {
@@ -22,7 +23,13 @@ const AboutPage = () => {
     <div className="container-about">
       <div className="left-about">
         <div className="about-cover">
-          <img src="/images/about.png" alt="about-cover" />
+          <LazyLoadImage
+            src="/images/about.png"
+            alt="about-cover"
+            effect="blur"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="about-text">
           <h1 className="title">About</h1>
@@ -39,13 +46,25 @@ const AboutPage = () => {
             </p>
           </div>
 
-          <img src="/images/about1.png" alt="" />
+          <LazyLoadImage
+            src="/images/about1.png"
+            alt=""
+            effect="blur"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div className="container-2">
           {ratings.map((item) => (
             <div className="ratings" key={item.id}>
-              <img src={item.rating} alt={item.title} />
+              <LazyLoadImage
+                src={item.rating}
+                alt={item.title}
+                effect="blur"
+                loading="lazy"
+                decoding="async"
+              />
               <div className="rating-desc">
                 <h1>{item.title}</h1>
                 <p>{item.tag}</p>
@@ -55,7 +74,13 @@ const AboutPage = () => {
         </div>
 
         <div className="container-3">
-          <img src="/images/about2.png" alt="" />
+          <LazyLoadImage
+            src="/images/about2.png"
+            alt=""
+            effect="blur"
+            loading="lazy"
+            decoding="async"
+          />
 
           <div className="story">
             <h1>Our Story</h1>

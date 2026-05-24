@@ -4,6 +4,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -40,7 +41,13 @@ const MenuPage = () => {
     <div className="container">
       <div className="left-menu">
         <div className="menu-cover">
-          <img src="/images/front4.png" alt="menu-cover" />
+          <LazyLoadImage
+            src="/images/front4.png"
+            alt="menu-cover"
+            effect="blur"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="menu-text">
           <h1 className="title">Menu</h1>
@@ -75,7 +82,13 @@ const MenuPage = () => {
               .filter((item) => item.title === category)
               .map((item, i) => (
                 <div className="content" key={i}>
-                  <img src={item.imageUrl} alt={item.name} />
+                  <LazyLoadImage
+                    src={item.imageUrl}
+                    alt={item.name}
+                    effect="blur"
+                    loading="lazy"
+                    decoding="async"
+                  />
 
                   <div className="content-desc">
                     <h2>{item.name}</h2>

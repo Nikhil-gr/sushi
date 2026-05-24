@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ReservationPage = () => {
   useGSAP(() => {
@@ -21,7 +22,13 @@ const ReservationPage = () => {
     <div className="container-reservation">
       <div className="left-reservation">
         <div className="reservation-cover">
-          <img src="/images/reservation.png" alt="reservation-cover" />
+          <LazyLoadImage
+            src="/images/reservation.png"
+            alt="reservation-cover"
+            effect="blur"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="reservation-text">
           <h1 className="title">

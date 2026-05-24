@@ -2,6 +2,7 @@ import { openingHours } from "../../constants";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const ContactPage = () => {
   useGSAP(() => {
     const heroSplit = new SplitText(".title", {
@@ -21,7 +22,13 @@ const ContactPage = () => {
     <div className="container-contact">
       <div className="left-contact">
         <div className="contact-cover">
-          <img src="/images/contact.png" alt="contact-cover" />
+          <LazyLoadImage
+            src="/images/contact.png"
+            alt="contact-cover"
+            effect="blur"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="contact-text">
           <h1 className="title">contact</h1>
@@ -44,10 +51,34 @@ const ContactPage = () => {
           </div>
 
           <div className="images">
-            <img src="/images/contact1.png" alt="" />
-            <img src="/images/contact2.png" alt="" />
-            <img src="/images/contact.png" alt="" />
-            <img src="/images/about.png" alt="" />
+            <LazyLoadImage
+              src="/images/contact1.png"
+              alt=""
+              effect="blur"
+              loading="lazy"
+              decoding="async"
+            />
+            <LazyLoadImage
+              src="/images/contact2.png"
+              alt=""
+              effect="blur"
+              loading="lazy"
+              decoding="async"
+            />
+            <LazyLoadImage
+              src="/images/contact.png"
+              alt=""
+              effect="blur"
+              loading="lazy"
+              decoding="async"
+            />
+            <LazyLoadImage
+              src="/images/about.png"
+              alt=""
+              effect="blur"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
 

@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const FrontPage = () => {
   useGSAP(() => {
@@ -28,7 +29,8 @@ const FrontPage = () => {
             muted
             loop
             playsInline
-            preload="auto"
+            preload="metadata"
+            poster="/images/front4.png"
           />{" "}
         </div>
         <div className="hero-text">
@@ -43,7 +45,13 @@ const FrontPage = () => {
       <div className="right">
         <div className="right-card">
           <Link to={"/menu"}>
-            <img src="/images/front1.png" alt="menu" />
+            <LazyLoadImage
+              src="/images/front1.png"
+              alt="menu"
+              effect="blur"
+              loading="lazy"
+              decoding="async"
+            />
           </Link>
           <div className="card-label">
             Menu <span>→</span>
@@ -51,7 +59,13 @@ const FrontPage = () => {
         </div>
         <div className="right-card">
           <Link to={"/reservation"}>
-            <img src="/images/front2.png" alt="reservation" />
+            <LazyLoadImage
+              src="/images/front2.png"
+              alt="reservation"
+              effect="blur"
+              loading="lazy"
+              decoding="async"
+            />
           </Link>
           <div className="card-label">
             Reservation <span>→</span>
@@ -59,7 +73,13 @@ const FrontPage = () => {
         </div>
         <div className="right-card">
           <Link to={"/about"}>
-            <img src="/images/front3.png" alt="our restaurant" />
+            <LazyLoadImage
+              src="/images/front3.png"
+              alt="our restaurant"
+              effect="blur"
+              loading="lazy"
+              decoding="async"
+            />
           </Link>
           <div className="card-label">
             Our Restaurant <span>→</span>
