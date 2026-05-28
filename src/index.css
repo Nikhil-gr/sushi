@@ -597,17 +597,19 @@ nav {
 }
 
 .reservation-form button {
-  padding: 20px;
+  padding: 14px 24px;
   border: none;
   border-radius: 8px;
   background: #efe7d2;
   text-transform: uppercase;
   cursor: pointer;
   color: #0a0b0a;
-  font-size: 21px;
+  font-size: 16px;
+  width: 100%;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+  will-change: transform;
 }
 
 .reservation-form button:hover {
@@ -820,6 +822,7 @@ nav {
   .container-reservation,
   .container-contact {
     grid-template-columns: 1fr;
+    width: 100%;
     height: auto;
   }
 
@@ -1080,7 +1083,10 @@ nav {
   .reservation-form {
     gap: 12px;
   }
-
+  .reservation-form input,
+  .reservation-form button {
+    padding: 13px;
+  }
   .reservation-row {
     grid-template-columns: 1fr;
   }
@@ -1157,9 +1163,8 @@ nav {
     font-size: 34px;
   }
 
-  .reservation-form input,
-  .reservation-form button {
-    padding: 14px;
+  .reservation-form input {
+    padding: 13px;
   }
 
   .images {
@@ -1229,7 +1234,9 @@ nav {
   .right-reservation {
     padding: 40px 18px;
   }
-
+  .reservation-form input {
+    padding: 13px;
+  }
   .reservation-grid {
     gap: 56px;
   }
